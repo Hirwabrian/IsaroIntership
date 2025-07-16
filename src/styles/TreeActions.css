@@ -1,0 +1,89 @@
+/* Main Container */
+.tree-actions-cluster {
+  position: absolute;
+  bottom: 350px;
+  right: 15px;
+  display: flex;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+  padding: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(76, 175, 80, 0.15);
+  z-index: 1001;
+}
+
+/* Base Button Styles */
+.tree-action-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  pointer-events: auto;
+}
+
+/* Primary Action (Gift) */
+.tree-action-primary {
+  background: #4caf50;
+  color: white;
+}
+
+/* Icon Styling */
+.tree-action-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Hover Effects */
+.tree-action-btn:hover {
+  transform: scale(1.12);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.tree-action-primary:hover {
+  background: #43a047;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.3);
+}
+
+/* Active/Pressed States */
+.tree-action-btn:active {
+  transform: scale(0.98);
+}
+
+.tree-action-primary:active {
+  animation: action-pulse 0.4s ease-out;
+}
+
+@keyframes action-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(76, 175, 80, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .tree-actions-cluster {
+    bottom: 16px;
+    left: 16px;
+    padding: 6px;
+  }
+
+  .tree-action-btn {
+    width: 36px;
+    height: 36px;
+  }
+}

@@ -1,0 +1,41 @@
+.env-stats-text-overlay {
+  position: absolute;
+  top: 115px;
+  left: 20px;
+  z-index: 1010;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.1rem;
+  color: #fff;
+  line-height: 1.6;
+  pointer-events: auto;
+  white-space: pre;
+
+  /* Only 3 essential enhancements */
+  text-shadow: 0 0 1px #000, 0 0 2px rgba(0, 0, 0, 0.7); /* Crisper text */
+  transition: opacity 0.3s ease; /* For hover */
+  letter-spacing: 0.02em; /* Slightly tighter */
+}
+
+.env-primary {
+  margin-bottom: 1.2rem;
+  font-weight: 500; /* Barely noticeable weight */
+}
+
+.env-secondary {
+  margin-top: 0.5rem;
+}
+
+.env-secondary div {
+  margin: 0.25rem 0;
+  opacity: 0.9; /* Slight fade for hierarchy */
+  transition: opacity 0.2s ease;
+}
+
+.env-secondary div:hover {
+  opacity: 1; /* Full contrast on hover */
+}
+
+.value {
+  font-weight: bold;
+  color: #f8f8f8; /* Half-step brighter */
+}

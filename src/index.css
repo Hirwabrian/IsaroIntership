@@ -1,0 +1,19 @@
+/* Chrome Extension Specific Reset */
+html,
+body,
+#root {
+  width: 600px; /* Match your desired popup size */
+  height: 450px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Critical: prevents scrollbars */
+  position: relative; /* For absolute positioning */
+}
+
+/* Remove Vite's default styles */
+body {
+  display: block !important; /* Overrides flex */
+  min-width: auto !important;
+  min-height: auto !important;
+  place-items: initial !important;
+}

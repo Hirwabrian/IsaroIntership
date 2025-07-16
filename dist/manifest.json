@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Tree Planting Extension",
+  "version": "1.0",
+  "permissions": ["storage", "scripting", "activeTab", "tabs"],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "images/econext.webp"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; connect-src 'self' https://api.mapbox.com https://events.mapbox.com https://api.weatherapi.com; worker-src 'self'; style-src 'self' 'unsafe-inline'"
+  },
+  "host_permissions": ["https://api.weatherapi.com/*"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["images/*"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "icons": {
+    "16": "images/econext.webp",
+    "48": "images/econext.webp",
+    "128": "images/econext.webp"
+  }
+}
